@@ -1,0 +1,27 @@
+<section class="section about" id="about">
+  <div class="container about__grid">
+    <div class="about__intro" appReveal>
+      <p class="eyebrow">01 — Profil</p>
+      <h2 class="section-title">Développeuse passionnée par le <span class="grad-text">web moderne</span></h2>
+      <p class="about__text">
+        Ingénieure informatique, je transforme des idées en applications web
+        rapides, élégantes et faciles à utiliser. Du composant frontend jusqu'à
+        l'API, j'aime construire des produits complets et bien pensés.
+      </p>
+      <p class="about__text">
+        Ce qui me motive : un code propre, une architecture claire, et les
+        détails d'interface qui rendent un produit agréable à utiliser.
+      </p>
+      <a href="/cv.pdf" class="btn btn--ghost" download>Télécharger mon CV</a>
+    </div>
+
+    <div class="about__stats" appReveal>
+      @for (stat of stats; track stat.label) {
+        <div class="stat glass">
+          <span class="stat__value grad-text">{{ stat.value }}</span>
+          <span class="stat__label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
