@@ -1,11 +1,10 @@
 <header class="header" [class.header--scrolled]="scrolled()">
   <div class="container header__inner">
     <a href="#top" class="brand" (click)="closeMenu()">
-      <span class="brand__mark">IB</span>
-      <span class="brand__name">Ibtihel</span>
+      <span class="brand__mark">IA</span>
+      <span class="brand__name">Ibtihel Ayari</span>
     </a>
 
-    <!-- Navigation (une seule fois, avec les traductions) -->
     <nav class="nav" [class.nav--open]="menuOpen()">
       @for (link of links; track link.href) {
         <a [href]="link.href" class="nav__link" (click)="closeMenu()">{{ i18n.t(link.key) }}</a>
