@@ -1,0 +1,6 @@
+.footer { border-top: 1px solid var(--border); padding-block: 2rem; }
+.footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.footer__brand { font-family: var(--font-display); font-weight: 600; }
+.footer__note { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-faint); }
+.footer__top { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); transition: color 0.2s var(--ease); }
+.footer__top:hover { color: var(--accent); }
