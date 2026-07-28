@@ -1,0 +1,88 @@
+.hero {
+  min-height: 100vh;             /* occupe toute la hauteur de l'écran */
+  display: flex;
+  align-items: center;
+  padding-top: 72px;             /* place pour le futur header */
+}
+
+/* Deux colonnes : texte à gauche, fenêtre de code à droite.
+   CSS Grid est parfait pour ce genre de mise en page. */
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 6vw, 4.5rem);
+  align-items: center;
+  width: 100%;
+}
+
+.hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);
+  padding: 0.4rem 0.9rem; margin-bottom: 1.75rem;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--surface); backdrop-filter: blur(8px);
+
+  /* le petit point vert qui "pulse" */
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%; background: #40e88f;
+    animation: pulse 2.4s infinite;
+  }
+}
+
+/* Une animation CSS : le point émet une onde qui s'estompe */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(64,232,143,0.5); }
+  70%  { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.hero__title {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(2.7rem, 7vw, 4.7rem);   /* titre fluide */
+  line-height: 1.02; letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+}
+
+.hero__lead {
+  color: var(--text-muted); font-size: 1.14rem;
+  max-width: 48ch; margin-bottom: 2.25rem;   /* ~48 caractères par ligne */
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
+
+.hero__stack {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem;
+  li {
+    font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);
+    padding: 0.4rem 0.85rem; border: 1px solid var(--border); border-radius: 999px;
+  }
+}
+
+/* La fenêtre de code, avec une légère lévitation */
+.hero__code { overflow: hidden; animation: floaty 7s ease-in-out infinite; }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+.code__bar {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 1.1rem; border-bottom: 1px solid var(--border);
+}
+.code__dot { width: 11px; height: 11px; border-radius: 50%; background: var(--border-strong); }
+.code__dot:nth-child(1) { background: #ff5f57; }
+.code__dot:nth-child(2) { background: #febc2e; }
+.code__dot:nth-child(3) { background: #28c840; }
+.code__file { margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); }
+
+.code__body {
+  font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.85;
+  padding: 1.4rem 1.5rem; color: var(--text-muted); white-space: pre;
+}
+/* Coloration syntaxique */
+.c-key  { color: var(--accent); }
+.c-str  { color: #40e88f; }
+.c-bool { color: #febc2e; }
+
+/* Responsive : sous 900px, une seule colonne */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__code { max-width: 480px; }
+}

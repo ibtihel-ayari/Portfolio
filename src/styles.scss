@@ -139,3 +139,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     scroll-behavior: auto !important;
   }
 }
+
+/* Petit intitulé au-dessus des titres de section */
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.82rem;
+  text-transform: uppercase; color: var(--accent-2);
+  display: inline-flex; align-items: center; gap: 0.55rem; margin-bottom: 1.1rem;
+}
+.eyebrow::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--grad); }
+
+.section-title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.08;
+  letter-spacing: -0.03em; margin-bottom: 1rem;
+}
+.section-lead { color: var(--text-muted); max-width: 58ch; font-size: 1.08rem; }
+
+/* État de départ des éléments animés au scroll */
+.reveal { opacity: 0; transform: translateY(26px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: none; }   /* état final, ajouté par la directive */
