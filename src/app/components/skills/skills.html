@@ -1,0 +1,23 @@
+<section class="section skills" id="skills">
+  <div class="container">
+    <div class="skills__head" appReveal>
+      <p class="eyebrow">02 — Compétences</p>
+      <h2 class="section-title">La boîte à outils</h2>
+      <p class="section-lead">Les technologies que j'utilise au quotidien, du frontend au backend.</p>
+    </div>
+
+    <div class="skills__grid">
+      @for (group of groups; track group.label; let i = $index) {
+        <div class="skill-card" appReveal>
+          <div class="skill-card__head">
+            <span class="skill-card__index">{{ '0' + (i + 1) }}</span>
+            <h3 class="skill-card__title">{{ group.label }}</h3>
+          </div>
+          <ul class="skill-card__list">
+            @for (item of group.items; track item) { <li>{{ item }}</li> }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>
