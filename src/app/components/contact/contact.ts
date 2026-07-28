@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Reveal } from '../../services/reveal';
-import { I18nService } from '../../services/i18n';       // ajout
+import { I18nService } from '../../services/i18n';       
 
 @Component({
   selector: 'app-contact',
@@ -10,12 +10,12 @@ import { I18nService } from '../../services/i18n';       // ajout
   styleUrl: './contact.scss',
 })
 export class Contact {
-  protected i18n = inject(I18nService);                  // ajout
+  protected i18n = inject(I18nService);               
 
   // ↓ mets tes vraies coordonnées
-  protected readonly email = 'ton.email@exemple.com';
-  protected readonly linkedin = 'https://linkedin.com/in/ton-profil';
-  protected readonly github = 'https://github.com/ton-compte';
+  protected readonly email = 'ibtihelayari88@gmail.com';
+  protected readonly linkedin = 'https://linkedin.com/in/ibtihel-ayari';
+  protected readonly github = 'https://github.com/ibtihel-ayari';
 
   protected name = signal('');
   protected senderEmail = signal('');

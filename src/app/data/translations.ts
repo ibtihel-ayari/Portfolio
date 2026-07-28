@@ -11,23 +11,25 @@ export const TRANSLATIONS: Record<string, { fr: string; en: string }> = {
 
   // --- Hero ---
   'hero.badge':      { fr: 'Ouverte aux opportunités', en: 'Open to opportunities' },
-  'hero.title1':     { fr: 'Je construis des',         en: 'I build polished' },
-  'hero.titleGrad':  { fr: 'produits web',             en: 'web products' },
-  'hero.title2':     { fr: 'soignés.',                 en: '.' },
-  'hero.lead':       {
-    fr: "Ingénieure informatique & développeuse. Je conçois des applications web modernes, du frontend à l'API, avec un soin particulier pour le détail et l'expérience utilisateur.",
-    en: 'Software engineer & developer. I build modern web applications, from frontend to API, with a strong focus on detail and user experience.',
+  'hero.title1':    { fr: 'Développeuse',           en: 'Full-stack' },
+  'hero.titleGrad': { fr: 'full-stack',             en: 'developer' },
+  'hero.title2':    { fr: '.',                      en: '.' },
+  'hero.lead': {
+    fr: "Ingénieure informatique & développeuse full-stack. Je conçois des applications web de bout en bout, du frontend à l'API et la base de données, avec un soin particulier pour le détail et l'expérience utilisateur.",
+    en: 'Software engineer & full-stack developer. I build web applications end to end, from frontend to API and database, with a strong focus on detail and user experience.',
   },
+
+
   'hero.ctaProjects': { fr: 'Découvrir mes projets', en: 'View my projects' },
   'hero.ctaContact':  { fr: 'Me contacter',          en: 'Get in touch' },
 
   // --- About ---
   'about.eyebrow':  { fr: '01 — Profil', en: '01 — About' },
-  'about.title1':   { fr: 'Développeuse passionnée par le', en: 'Developer passionate about the' },
-  'about.titleGrad':{ fr: 'web moderne', en: 'modern web' },
+  'about.title1':    { fr: 'Développeuse',   en: 'Full-stack' },
+  'about.titleGrad': { fr: 'full-stack',     en: 'developer' },
   'about.p1': {
-    fr: "Ingénieure informatique, je transforme des idées en applications web rapides, élégantes et faciles à utiliser. Du composant frontend jusqu'à l'API, j'aime construire des produits complets.",
-    en: 'Software engineer, I turn ideas into fast, elegant and easy-to-use web applications. From frontend component to API, I love building complete products.',
+    fr: "Ingénieure informatique, je transforme des idées en applications web complètes : une interface soignée côté frontend, une API robuste et une base de données bien pensée côté backend.",
+    en: 'Software engineer, I turn ideas into complete web applications: a polished frontend interface, a robust API and a well-designed database on the backend.',
   },
   'about.p2': {
     fr: "Ce qui me motive : un code propre, une architecture claire, et les détails d'interface qui rendent un produit agréable à utiliser.",
