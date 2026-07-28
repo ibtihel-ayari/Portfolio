@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, inject } from '@angular/core';
+import { I18nService } from '../../services/i18n';  
 @Component({
   selector: 'app-footer',
   imports: [],
@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class Footer {
   protected year = new Date().getFullYear();   // année automatique
+  protected i18n = inject(I18nService); 
 }

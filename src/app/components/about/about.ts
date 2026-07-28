@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
-import { Reveal } from '../../services/reveal';   // pour utiliser appReveal
+import { Component, inject } from '@angular/core';
+import { Reveal } from '../../services/reveal';
+import { I18nService } from '../../services/i18n';
 
 @Component({
   selector: 'app-about',
-  imports: [Reveal],                    // <-- on importe la directive
+  imports: [Reveal],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
 export class About {
+  protected i18n = inject(I18nService);          // <-- la ligne qui manquait
+
   protected stats = [
-    { value: '3+',   label: "années d'expérience en développement" },
-    { value: '10+',  label: 'projets livrés' },
-    { value: '100%', label: 'orientée détail & qualité de code' },
+    { value: '1+',   key: 'about.stat1' },
+    { value: '2+',  key: 'about.stat2' },
+    { value: '100%', key: 'about.stat3' },
   ];
 }

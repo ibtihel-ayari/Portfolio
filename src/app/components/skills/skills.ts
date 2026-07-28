@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Reveal } from '../../services/reveal';
+import { I18nService } from '../../services/i18n';
 import { SKILL_GROUPS, SkillGroup } from '../../data/skills';
 
 @Component({
@@ -9,5 +10,6 @@ import { SKILL_GROUPS, SkillGroup } from '../../data/skills';
   styleUrl: './skills.scss',
 })
 export class Skills {
+  protected i18n = inject(I18nService);            
   protected groups: SkillGroup[] = SKILL_GROUPS;
 }

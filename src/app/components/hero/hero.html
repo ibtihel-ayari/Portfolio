@@ -3,23 +3,19 @@
     <div class="hero__content">
       <p class="hero__eyebrow">
         <span class="dot"></span>
-        Ouverte aux opportunités
+        {{ i18n.t('hero.badge') }}
       </p>
 
       <h1 class="hero__title">
-        Je construis des<br />
-        <span class="grad-text">produits web</span> soignés.
+        {{ i18n.t('hero.title1') }}<br />
+        <span class="grad-text">{{ i18n.t('hero.titleGrad') }}</span> {{ i18n.t('hero.title2') }}
       </h1>
 
-      <p class="hero__lead">
-        Ingénieure informatique &amp; développeuse. Je conçois des applications
-        web modernes, du frontend à l'API, avec un soin particulier pour le
-        détail, la performance et l'expérience utilisateur.
-      </p>
+      <p class="hero__lead">{{ i18n.t('hero.lead') }}</p>
 
       <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary">Découvrir mes projets</a>
-        <a href="#contact" class="btn btn--ghost">Me contacter</a>
+        <a href="#projects" class="btn btn--primary">{{ i18n.t('hero.ctaProjects') }}</a>
+        <a href="#contact" class="btn btn--ghost">{{ i18n.t('hero.ctaContact') }}</a>
       </div>
 
       <ul class="hero__stack">

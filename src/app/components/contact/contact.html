@@ -1,38 +1,43 @@
 <section class="section contact" id="contact">
   <div class="container contact__grid">
     <div class="contact__intro" appReveal>
-      <p class="eyebrow">04 — Contact</p>
-      <h2 class="section-title">Travaillons <span class="grad-text">ensemble</span></h2>
-      <p class="section-lead">Un projet, une opportunité, ou juste envie d'échanger ? Écris-moi.</p>
+      <p class="eyebrow">{{ i18n.t('contact.eyebrow') }}</p>
+      <h2 class="section-title">
+        {{ i18n.t('contact.title1') }} <span class="grad-text">{{ i18n.t('contact.titleGrad') }}</span>
+      </h2>
+      <p class="section-lead">{{ i18n.t('contact.lead') }}</p>
 
       <div class="contact__channels">
         <a [href]="'mailto:' + email" class="channel glass">
           <span class="channel__key">email</span><span class="channel__val">{{ email }}</span>
         </a>
         <a [href]="linkedin" target="_blank" rel="noopener" class="channel glass">
-          <span class="channel__key">linkedin</span><span class="channel__val">Voir mon profil ↗</span>
+          <span class="channel__key">linkedin</span><span class="channel__val">{{ i18n.t('contact.seeProfile') }}</span>
         </a>
         <a [href]="github" target="_blank" rel="noopener" class="channel glass">
-          <span class="channel__key">github</span><span class="channel__val">Voir mon code ↗</span>
+          <span class="channel__key">github</span><span class="channel__val">{{ i18n.t('contact.seeCode') }}</span>
         </a>
       </div>
     </div>
 
     <div class="contact__form glass" appReveal>
       <label class="field">
-        <span class="field__label">Nom</span>
-        <input type="text" [ngModel]="name()" (ngModelChange)="name.set($event)" placeholder="Votre nom" />
+        <span class="field__label">{{ i18n.t('contact.fieldName') }}</span>
+        <input type="text" [ngModel]="name()" (ngModelChange)="name.set($event)"
+               [placeholder]="i18n.t('contact.phName')" />
       </label>
       <label class="field">
-        <span class="field__label">Email</span>
-        <input type="email" [ngModel]="senderEmail()" (ngModelChange)="senderEmail.set($event)" placeholder="vous@exemple.com" />
+        <span class="field__label">{{ i18n.t('contact.fieldEmail') }}</span>
+        <input type="email" [ngModel]="senderEmail()" (ngModelChange)="senderEmail.set($event)"
+               placeholder="vous@exemple.com" />
       </label>
       <label class="field">
-        <span class="field__label">Message</span>
-        <textarea rows="4" [ngModel]="message()" (ngModelChange)="message.set($event)" placeholder="Votre message..."></textarea>
+        <span class="field__label">{{ i18n.t('contact.fieldMessage') }}</span>
+        <textarea rows="4" [ngModel]="message()" (ngModelChange)="message.set($event)"
+                  [placeholder]="i18n.t('contact.phMessage')"></textarea>
       </label>
-      <button class="btn btn--primary" type="button" (click)="send()">Envoyer le message</button>
-      @if (sent()) { <p class="contact__confirm">Votre client mail s'est ouvert. À bientôt !</p> }
+      <button class="btn btn--primary" type="button" (click)="send()">{{ i18n.t('contact.send') }}</button>
+      @if (sent()) { <p class="contact__confirm">{{ i18n.t('contact.confirm') }}</p> }
     </div>
   </div>
 </section>

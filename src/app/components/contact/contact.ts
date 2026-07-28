@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';          // pour ngModel
+import { Component, inject, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Reveal } from '../../services/reveal';
+import { I18nService } from '../../services/i18n';       // ajout
 
 @Component({
   selector: 'app-contact',
@@ -9,18 +10,18 @@ import { Reveal } from '../../services/reveal';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  protected i18n = inject(I18nService);                  // ajout
+
   // ↓ mets tes vraies coordonnées
   protected readonly email = 'ton.email@exemple.com';
   protected readonly linkedin = 'https://linkedin.com/in/ton-profil';
   protected readonly github = 'https://github.com/ton-compte';
 
-  // un signal par champ du formulaire
   protected name = signal('');
   protected senderEmail = signal('');
   protected message = signal('');
   protected sent = signal(false);
 
-  // ouvre le client mail pré-rempli
   send(): void {
     const subject = encodeURIComponent(`Contact portfolio — ${this.name()}`);
     const body = encodeURIComponent(`${this.message()}\n\n— ${this.name()} (${this.senderEmail()})`);

@@ -57,3 +57,11 @@
   .nav--open { transform: translateY(0); }
   .nav__link { width: 100%; padding: 1rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; }
 }
+
+.lang-btn {
+  font-family: var(--font-mono); font-size: 0.82rem; font-weight: 500;
+  min-width: 40px; height: 38px; padding: 0 0.6rem;
+  border: 1px solid var(--border); border-radius: 10px; color: var(--text-muted);
+  transition: all 0.2s var(--ease);
+}
+.lang-btn:hover { color: var(--accent); border-color: var(--accent); }

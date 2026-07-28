@@ -1,7 +1,6 @@
 import { Component, HostListener, inject, signal } from '@angular/core';
-import { ThemeService } from '../../services/theme';   // créé à l'étape 6
-
-interface NavLink { label: string; href: string; }
+import { ThemeService } from '../../services/theme';
+import { I18nService } from '../../services/i18n';       
 
 @Component({
   selector: 'app-header',
@@ -10,27 +9,23 @@ interface NavLink { label: string; href: string; }
   styleUrl: './header.scss',
 })
 export class Header {
-  // inject() : la façon moderne de récupérer un service (voir étape 6)
   protected theme = inject(ThemeService);
+  protected i18n = inject(I18nService);                  
 
-  // Deux signals : "a-t-on scrollé ?" et "le menu mobile est-il ouvert ?"
   protected scrolled = signal(false);
   protected menuOpen = signal(false);
 
-  // Un simple tableau de données pour générer les liens
-  protected links: NavLink[] = [
-    { label: 'Profil', href: '#about' },
-    { label: 'Compétences', href: '#skills' },
-    { label: 'Projets', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+  // On remplace les libellés en dur par des CLÉS de traduction
+  protected links = [
+    { key: 'nav.about',    href: '#about' },
+    { key: 'nav.skills',   href: '#skills' },
+    { key: 'nav.projects', href: '#projects' },
+    { key: 'nav.contact',  href: '#contact' },
   ];
 
-  // @HostListener écoute un événement global. Ici : le scroll de la fenêtre.
   @HostListener('window:scroll')
-  onScroll(): void {
-    this.scrolled.set(window.scrollY > 24);   // on met à jour le signal
-  }
+  onScroll(): void { this.scrolled.set(window.scrollY > 24); }
 
-  toggleMenu(): void { this.menuOpen.update((v) => !v); }  // inverse la valeur
+  toggleMenu(): void { this.menuOpen.update((v) => !v); }
   closeMenu(): void { this.menuOpen.set(false); }
 }

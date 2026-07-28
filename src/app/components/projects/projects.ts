@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Reveal } from '../../services/reveal';
+import { I18nService } from '../../services/i18n';
 import { PROJECTS, Project } from '../../data/projects';
 
 @Component({
@@ -9,5 +10,6 @@ import { PROJECTS, Project } from '../../data/projects';
   styleUrl: './projects.scss',
 })
 export class Projects {
+  protected i18n = inject(I18nService);        
   protected projects: Project[] = PROJECTS;
 }
