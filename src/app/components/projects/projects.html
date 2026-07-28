@@ -1,0 +1,44 @@
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="projects__head" appReveal>
+      <p class="eyebrow">03 — Projets</p>
+      <h2 class="section-title">Réalisations sélectionnées</h2>
+      <p class="section-lead">Une sélection de projets qui montrent ma façon de résoudre des problèmes.</p>
+    </div>
+
+    <div class="projects__list">
+      @for (project of projects; track project.ref) {
+        <article class="project" [class.project--featured]="project.featured" appReveal>
+          <div class="project__media">
+            @if (project.image) {
+              <img [src]="project.image" [alt]="'Aperçu ' + project.title" loading="lazy" />
+            } @else {
+              <div class="project__placeholder">{{ project.ref }}</div>
+            }
+            <span class="project__ref">{{ project.ref }}</span>
+          </div>
+
+          <div class="project__body">
+            @if (project.featured) { <span class="project__badge">Projet phare</span> }
+            <h3 class="project__title">{{ project.title }}</h3>
+            <p class="project__summary">{{ project.summary }}</p>
+            <p class="project__desc">{{ project.description }}</p>
+
+            <ul class="project__tags">
+              @for (tech of project.technologies; track tech) { <li>{{ tech }}</li> }
+            </ul>
+
+            <div class="project__links">
+              @if (project.demoUrl) {
+                <a [href]="project.demoUrl" class="project__link" target="_blank" rel="noopener">Démo ↗</a>
+              }
+              @if (project.githubUrl) {
+                <a [href]="project.githubUrl" class="project__link" target="_blank" rel="noopener">Code ↗</a>
+              }
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
