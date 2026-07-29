@@ -7,6 +7,6 @@ import { I18nService } from '../../services/i18n';
   styleUrl: './footer.scss',
 })
 export class Footer {
-  protected year = new Date().getFullYear();   // année automatique
+  protected year = new Date().getFullYear();  
   protected i18n = inject(I18nService); 
 }

@@ -3,8 +3,8 @@ import { TRANSLATIONS, Lang } from '../data/translations';
 
 @Injectable({ providedIn: 'root' })
 export class I18nService {
-  // La langue active, dans un signal réactif (français par défaut)
-  readonly lang = signal<Lang>('fr');
+  // La langue active, dans un signal réactif (anglais par défaut)
+  readonly lang = signal<Lang>('en');
 
   constructor() {
     // On restaure la langue choisie lors d'une visite précédente

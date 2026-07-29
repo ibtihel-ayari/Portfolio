@@ -2,13 +2,13 @@ import { Lang } from './translations';
 
 export interface SkillGroup {
   label: Record<Lang, string>;   // <-- bilingue : { fr, en }
-  items: string[];               // les technos ne changent pas
+  items: string[];               
 }
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     label: { fr: 'Langages', en: 'Languages' },
-    items: ['Java', 'Python', 'TypeScript', 'SQL'],
+    items: ['Python', 'Java', 'TypeScript', 'C#'],
   },
   {
     label: { fr: 'Frontend', en: 'Frontend' },

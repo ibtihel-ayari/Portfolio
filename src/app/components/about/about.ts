@@ -9,7 +9,7 @@ import { I18nService } from '../../services/i18n';
   styleUrl: './about.scss',
 })
 export class About {
-  protected i18n = inject(I18nService);          // <-- la ligne qui manquait
+  protected i18n = inject(I18nService);        
 
   protected stats = [
     { value: '1+',   key: 'about.stat1' },

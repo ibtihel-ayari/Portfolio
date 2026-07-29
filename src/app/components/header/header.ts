@@ -15,7 +15,6 @@ export class Header {
   protected scrolled = signal(false);
   protected menuOpen = signal(false);
 
-  // On remplace les libellés en dur par des CLÉS de traduction
   protected links = [
     { key: 'nav.about',    href: '#about' },
     { key: 'nav.skills',   href: '#skills' },
