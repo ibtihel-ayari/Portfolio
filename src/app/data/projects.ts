@@ -18,49 +18,81 @@ export const PROJECTS: Project[] = [
   {
     ref: '01',
     title: {
-      fr: 'RecruitIA – Application de recrutement avec IA',
-      en: 'RecruitIA – AI-Powered Recruitment Application',
+      fr: 'RecruitIA – Plateforme de recrutement assistée par IA',
+      en: 'RecruitIA – AI-Assisted Recruitment Platform',
     },
     summary: {
-      fr: 'Plateforme web de gestion du recrutement avec authentification et tableau de bord, dotée d\'un module IA (LLM) pour le filtrage des candidats, la génération de quiz et la supervision intelligente des candidats lors des évaluations.',
-      en: 'Web-based recruitment management platform with authentication and a dashboard, featuring an AI module (LLM) for candidate filtering, quiz generation, and intelligent candidate proctoring during assessments.',
+      fr: "Plateforme full-stack de recrutement intégrant une API sécurisée, un tableau de bord d'administration et des fonctionnalités d'IA pour automatiser la sélection des candidats.",
+      en: "Full-stack recruitment platform featuring a secure API, an administration dashboard and AI-powered tools to streamline candidate selection.",
     },
     description: {
-      fr: 'Application full-stack de gestion du recrutement conçue pour automatiser et fiabiliser le processus de sélection. Le back-end .NET expose une API sécurisée avec authentification et gestion des rôles, tandis que le front-end Angular offre un tableau de bord de suivi des candidatures. Un module d\'IA basé sur un LLM analyse et filtre les CV, génère automatiquement des quiz adaptés au poste, et supervise les candidats en temps réel pendant les évaluations afin de détecter les comportements suspects. Les données sont persistées dans SQL Server.',
-      en: 'Full-stack recruitment management application designed to automate and strengthen the hiring process. The .NET back-end exposes a secure API with authentication and role management, while the Angular front-end provides a dashboard for tracking applications. An LLM-based AI module analyzes and filters résumés, automatically generates job-specific quizzes, and monitors candidates in real time during assessments to detect suspicious behavior. Data is persisted in SQL Server.',
+      fr: "Conception et développement d'une plateforme de recrutement basée sur une architecture .NET/Angular. L'application expose une API REST sécurisée avec authentification, autorisation par rôles et gestion des candidatures. Un module d'intelligence artificielle analyse les CV, génère automatiquement des questionnaires adaptés aux offres d'emploi et assiste la supervision des candidats pendant les évaluations. L'ensemble est conçu autour d'une architecture modulaire facilitant l'évolution et la maintenance de l'application.",
+      en: "Designed and developed a recruitment platform built on a .NET/Angular architecture. The application exposes a secure REST API with authentication, role-based authorization and candidate management. An AI module analyzes résumés, generates job-specific assessments and assists candidate monitoring during evaluations. The project follows a modular architecture designed for maintainability and scalability.",
     },
-    technologies: ['Angular', 'TypeScript', '.NET', 'SQL Server'],
-    image: 'projects/placeholder.svg',
+    technologies: [
+      'Angular',
+      'TypeScript',
+      '.NET',
+      'SQL Server'
+    ],
+    image: 'projects/recruitia.webp',
     featured: true,
     demoUrl: 'https://github.com/ibtihel-ayari/RecruitmentAppBackend',
     githubUrl: 'https://github.com/ibtihel-ayari/RecruitmentAppFrontEnd',
   },
+
   {
     ref: '02',
     title: {
       fr: 'Audit comptable assisté par IA',
-      en: 'AI-assisted accounting audit',
+      en: 'AI-Assisted Accounting Audit',
     },
     summary: {
-      fr: "Détecte automatiquement les anomalies d'un journal comptable (doublons, erreurs de TVA, écritures déséquilibrées, opérations suspectes) et les explique en langage clair.",
-      en: 'Automatically detects anomalies in an accounting journal (duplicates, VAT errors, unbalanced entries, suspicious transactions) and explains them in plain language.',
+      fr: "Application d'analyse comptable détectant automatiquement les anomalies d'un journal d'écritures grâce à un moteur de règles métier complété par un LLM.",
+      en: "Accounting analysis application that automatically detects anomalies using deterministic business rules combined with an LLM.",
     },
     description: {
-      fr: "Application web d'aide au contrôle comptable : l'utilisateur importe un journal d'écritures (CSV ou format FEC) et obtient en quelques secondes une liste d'anomalies classées par gravité, chacune accompagnée d'une explication et d'une action suggérée. L'architecture repose sur une séparation stricte en deux couches : une couche déterministe de règles métier (fonctions pures testées avec pytest) qui assure une détection exacte et reproductible, et une couche LLM qui reformule chaque anomalie en langage clair sans jamais inventer de chiffre. Un mode de repli local permet à l'application de fonctionner sans clé API. Backend FastAPI, frontend autonome, jeu de données d'exemple et suite de tests inclus.",
-      en: 'Web application supporting accounting review: the user imports an entries journal (CSV or French FEC format) and gets, within seconds, a list of anomalies ranked by severity, each with an explanation and a suggested action. The architecture relies on a strict two-layer separation: a deterministic business-rules layer (pure functions tested with pytest) ensuring exact, reproducible detection, and an LLM layer that rephrases each anomaly in plain language without ever inventing figures. A local fallback mode lets the app run without an API key. FastAPI backend, standalone frontend, sample dataset and test suite included.',
+      fr: "Développement d'un outil d'aide au contrôle comptable capable d'analyser des fichiers CSV ou FEC et d'identifier les incohérences, écritures déséquilibrées, erreurs de TVA et opérations suspectes. L'architecture repose sur une séparation stricte entre un moteur déterministe implémentant les règles métier avec Python et Pandas, et un LLM chargé uniquement d'expliquer les résultats en langage naturel. Cette approche garantit des analyses fiables, reproductibles et indépendantes du modèle d'IA. Le projet comprend une API FastAPI, des tests automatisés avec Pytest ainsi qu'un mode de fonctionnement local sans dépendance à une API externe.",
+      en: "Developed an accounting audit tool capable of analyzing CSV and FEC files to detect inconsistencies, VAT errors, unbalanced entries and suspicious transactions. The architecture separates deterministic business-rule processing implemented with Python and Pandas from an LLM responsible only for generating human-readable explanations. This design ensures reliable, reproducible analyses independent of the AI model. The project includes a FastAPI backend, automated Pytest test suite and an offline fallback mode.",
     },
-    technologies: ['Python', 'FastAPI', 'pandas', 'Pydantic', 'Anthropic API', 'pytest', 'Angular'],
-    image: 'projects/audit-comptable-ia.svg',
+    technologies: [
+      'Python',
+      'FastAPI',
+      'Pandas',
+      'Pydantic',
+      'Anthropic API',
+      'Pytest',
+      'Angular'
+    ],
+    image: 'projects/audit-comptable-ia.webp',
     githubUrl: 'https://github.com/ton-compte/audit-comptable-ia',
   },
+
   {
     ref: '03',
-    title:   { fr: 'Titre du projet', en: 'Project title' },
-    summary: { fr: 'Une phrase qui résume le problème résolu.', en: 'One sentence summarizing the problem solved.' },
-    description: { fr: 'Contexte, ce que tu as fait, technologies, résultat.', en: 'Context, what you did, technologies, outcome.' },
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    image: 'projects/placeholder.svg',
+    title: {
+      fr: 'DataChat – Plateforme d’analyse de données assistée par IA',
+      en: 'DataChat – AI-Powered Data Analytics Platform',
+    },
+    summary: {
+      fr: "Application permettant d'interroger des fichiers CSV ou Excel en langage naturel et de générer automatiquement des visualisations interactives.",
+      en: "Application that transforms natural language questions into interactive data visualizations from CSV and Excel files.",
+    },
+    description: {
+      fr: "Développement d'une plateforme d'analyse de données reposant sur une architecture sécurisée à deux niveaux. Un LLM traduit les requêtes utilisateur en un plan d'analyse structuré au format JSON, tandis qu'un moteur déterministe basé sur Pandas exécute les traitements sans jamais exécuter de code généré par l'IA. Seul le schéma des données est transmis au modèle afin de préserver la confidentialité des fichiers et de limiter les hallucinations. Un planificateur local basé sur des règles permet également d'utiliser l'application sans clé API. Les graphiques sont générés dynamiquement via Chart.js.",
+      en: "Developed a data analytics platform based on a secure two-layer architecture. An LLM converts natural language requests into structured JSON analysis plans while a deterministic Pandas engine executes every computation without running AI-generated code. Only the dataset schema is exposed to the model, improving privacy and reducing hallucinations. A local rule-based planner allows the application to operate even without an external AI service. Interactive visualizations are rendered dynamically with Chart.js.",
+    },
+    technologies: [
+      'Python',
+      'FastAPI',
+      'Angular',
+      'Pandas',
+      'Chart.js',
+      'Anthropic API',
+      'Pytest'
+    ],
+    image: 'projects/datachat.webp',
     demoUrl: 'https://example.com',
-    githubUrl: 'https://github.com/ton-compte/ton-repo',
+    githubUrl: 'https://github.com/ton-compte/datachat',
   },
 ];

@@ -15,9 +15,9 @@ export const TRANSLATIONS: Record<string, { fr: string; en: string }> = {
   'hero.titleGrad': { fr: 'full-stack',             en: 'developer' },
   'hero.title2':    { fr: '.',                      en: '.' },
   'hero.lead': {
-    fr: "Ingénieure informatique & développeuse full-stack. Je conçois des applications web de bout en bout, du frontend à l'API et la base de données, avec un soin particulier pour le détail et l'expérience utilisateur.",
-    en: 'Software engineer & full-stack developer. I build web applications end to end, from frontend to API and database, with a strong focus on detail and user experience.',
-  },
+      fr: "Ingénieure informatique et développeuse full-stack. Je conçois des applications web complètes — du frontend à la base de données — et j'y intègre l'intelligence artificielle pour créer des produits utiles, fiables et pensés pour l'utilisateur.",
+      en: 'Software engineer and full-stack developer. I build complete web applications — from frontend to database — and integrate AI to create useful, reliable, user-focused products.',
+    },
 
 
   'hero.ctaProjects': { fr: 'Découvrir mes projets', en: 'View my projects' },
@@ -28,12 +28,12 @@ export const TRANSLATIONS: Record<string, { fr: string; en: string }> = {
   'about.title1':    { fr: 'Développeuse',   en: 'Full-stack' },
   'about.titleGrad': { fr: 'full-stack',     en: 'developer' },
   'about.p1': {
-    fr: "Ingénieure informatique, je transforme des idées en applications web complètes : une interface soignée côté frontend, une API robuste et une base de données bien pensée côté backend.",
-    en: 'Software engineer, I turn ideas into complete web applications: a polished frontend interface, a robust API and a well-designed database on the backend.',
+    fr: "Ingénieure informatique, je donne vie à des produits web complets : une interface élégante et fluide côté frontend, une API robuste et une base de données bien pensée côté backend. Et parce que l'IA change la donne, je l'intègre pour rendre les applications plus intelligentes et plus utiles.",
+    en: 'Software engineer, I bring complete web products to life: an elegant, fluid interface on the frontend, a robust API and a well-designed database on the backend. And because AI is changing the game, I integrate it to make applications smarter and more useful.',
   },
   'about.p2': {
-    fr: "Ce qui me motive : un code propre, une architecture claire, et les détails d'interface qui rendent un produit agréable à utiliser.",
-    en: 'What drives me: clean code, clear architecture, and the interface details that make a product a pleasure to use.',
+    fr: "Ce qui m'anime : un code lisible, une architecture qui respire, et ces détails d'interface qu'on ne remarque pas mais qui rendent un produit agréable à utiliser.",
+    en: 'What drives me: readable code, an architecture that breathes, and the interface details you never notice but that make a product a pleasure to use.',
   },
   'about.cv':    { fr: 'Télécharger mon CV', en: 'Download my resume' },
   'about.stat1': { fr: "années d'expérience en développement", en: 'years of development experience' },
